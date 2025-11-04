@@ -1,0 +1,32 @@
+{
+  "name": "smart-form-filler",
+  "version": "1.0.0",
+  "description": "AI-powered web form automation tool that intelligently detects and fills form fields",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "demo": "node src/demo.js",
+    "test": "node src/test-runner.js",
+    "fill": "node fill-any-form.js",
+    "examples": "node examples/fill-any-page.js"
+  },
+  "keywords": [
+    "automation",
+    "form-filling",
+    "testing",
+    "ai",
+    "playwright"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "@playwright/test": "^1.40.0",
+    "openai": "^4.20.0",
+    "faker": "^6.6.6",
+    "@faker-js/faker": "^8.3.1",
+    "natural": "^6.10.0",
+    "compromise": "^14.10.0"
+  }
+}
