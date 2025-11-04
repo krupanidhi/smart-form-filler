@@ -5,6 +5,7 @@
  */
 
 import { SmartFormFiller } from './src/form-filler.js';
+import { SmartNavigator } from './src/smart-navigator.js';
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -39,6 +40,7 @@ Options:
   --data <pairs>        Custom data (format: "field1=value1,field2=value2")
   --submit              Submit the form after filling
   --submit-selector <s> Custom submit button selector (e.g., "#login-btn")
+  --auto-navigate       Intelligently navigate multi-step flows (toggles, Next, Finish, etc.)
   --analyze-only        Only analyze the form, don't fill
   --headless            Run in headless mode (no browser window)
   --keep-open           Keep browser open after completion
@@ -59,6 +61,7 @@ const options = {
   headless: args.includes('--headless'),
   keepOpen: args.includes('--keep-open'),
   slow: args.includes('--slow'),
+  autoNavigate: args.includes('--auto-navigate'),
   customData: {},
   submitSelector: null,
 };
@@ -160,6 +163,17 @@ async function fillAnyForm() {
       }
     } else {
       console.log('\n💡 Tip: Add --submit flag to submit the form automatically');
+    }
+    
+    // Auto-navigate if requested
+    if (options.autoNavigate) {
+      console.log('\n🤖 Starting intelligent auto-navigation...\n');
+      const navigator = new SmartNavigator(filler.page);
+      const steps = await navigator.autoNavigate(10);
+      console.log(`✅ Auto-navigation complete (${steps} steps)\n`);
+      
+      const finalUrl = filler.page.url();
+      console.log(`Final URL: ${finalUrl}\n`);
     }
     
     // Keep open or close
