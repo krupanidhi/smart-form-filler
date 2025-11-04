@@ -61,6 +61,9 @@ const options = {
     headless: args.includes('--headless'),
     keepOpen: args.includes('--keep-open'),
     slow: args.includes('--slow'),
+    autoNavigate: args.includes('--auto-navigate'),
+    agree: args.includes('--agree'),
+    disagree: args.includes('--disagree'),
     customData: {},
     submitSelector: null,
 };
@@ -189,7 +192,9 @@ async function fillAnyForm() {
             console.log('\n💡 Tip: Add --submit flag to submit the form automatically');
         }
 
-        // Auto-navigate if requested
+        // Auto-navigate if requested (must happen before keep-open)
+        console.log('\n🔍 Debug: autoNavigate =', options.autoNavigate, ', submit =', options.submit);
+        
         if (options.autoNavigate) {
             console.log('\n🤖 Starting intelligent auto-navigation...\n');
             const navigator = new SmartNavigator(filler.page);
@@ -197,12 +202,18 @@ async function fillAnyForm() {
             console.log(`✅ Auto-navigation complete (${steps} steps)\n`);
 
             const finalUrl = filler.page.url();
-            console.log(`Final URL: ${finalUrl}\n`);
+            const finalTitle = await filler.page.title();
+            console.log(`Final URL: ${finalUrl}`);
+            console.log(`Final Title: ${finalTitle}\n`);
+            
+            await filler.takeScreenshot('after-auto-navigate');
+        } else {
+            console.log('ℹ️  Auto-navigate not enabled. Use --auto-navigate flag.\n');
         }
 
         // Keep open or close
         if (options.keepOpen) {
-            console.log('\n⏸️  Browser will stay open for review. Press Ctrl+C to close.');
+            console.log('⏸️  Browser will stay open for review. Press Ctrl+C to close.\n');
             await new Promise(() => { }); // Keep open indefinitely
         } else {
             console.log('\n⏸️  Browser will close in 5 seconds...');
