@@ -8,6 +8,8 @@ An intelligent web form automation tool that uses AI-powered field detection and
 - 🧠 **AI-Powered Classification** - Recognizes field types (email, phone, name, etc.) without manual configuration
 - 📝 **Smart Data Generation** - Generates realistic test data using Faker.js
 - 🔍 **No XPath Required** - Uses robust selectors (ID, name, label, ARIA) instead of fragile XPath
+- 🎬 **Action Recorder** - Record browser actions and generate automation scripts (NEW!)
+- 🤖 **Smart Navigator** - Intelligently handles multi-step flows (agreements, Next, Finish buttons)
 - 🌐 **Multi-language Support** - Works with forms in different languages
 - 📸 **Screenshot Capture** - Automatically captures screenshots for debugging
 - 🎨 **Vision AI Integration** - Optional GPT-4 Vision support for enhanced detection
@@ -45,6 +47,47 @@ import { quickFill } from './src/index.js';
 
 await quickFill('https://example.com/form');
 ```
+
+## 🎬 Action Recorder (NEW!)
+
+Record your browser actions and automatically generate automation scripts!
+
+### Record Actions
+
+```bash
+node record-actions.js https://example.com/login
+```
+
+**What it does:**
+1. Opens browser to your URL
+2. Records ALL your actions (clicks, inputs, navigation)
+3. Generates automation scripts when you press Ctrl+C
+
+**What it captures:**
+- ✅ Form inputs (by name, placeholder, ID)
+- ✅ Button clicks (by text, role, aria-label)
+- ✅ Multi-step workflows
+- ✅ Page navigation
+- ❌ NO XPATH - only semantic selectors!
+
+### Generated Scripts
+
+**Playwright format:**
+```javascript
+await page.fill('[name="username"]', 'myuser');
+await page.click('text="Log in"');
+await page.click('[role="switch"]'); // Agreement toggle
+await page.click('text="Next"');
+```
+
+**Smart Form Filler format:**
+```javascript
+await filler.fillForm({ username: 'myuser', password: 'pass' });
+await filler.submit();
+await navigator.autoNavigate(); // Handles Next, Finish, etc.
+```
+
+📖 **[Full Action Recorder Guide](./ACTION_RECORDER_GUIDE.md)**
 
 ## 📖 Usage Examples
 

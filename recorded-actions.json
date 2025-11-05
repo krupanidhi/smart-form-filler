@@ -1,0 +1,456 @@
+[
+  {
+    "type": "click",
+    "timestamp": 1762354848329,
+    "selector": {
+      "type": "id",
+      "value": "activity-code",
+      "selector": "#activity-code"
+    },
+    "element": {
+      "tagName": "input",
+      "type": "text",
+      "id": "activity-code",
+      "name": "eps_activityCode",
+      "className": "tb-input ng-untouched ng-pristine ng-valid",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": null,
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "input",
+    "timestamp": 1762354849534,
+    "selector": {
+      "type": "id",
+      "value": "activity-code",
+      "selector": "#activity-code"
+    },
+    "element": {
+      "tagName": "input",
+      "type": "text",
+      "id": "activity-code",
+      "name": "eps_activityCode",
+      "className": "tb-input ng-untouched ng-pristine ng-valid",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": null,
+      "value": "h"
+    },
+    "value": "h",
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "input",
+    "timestamp": 1762354850922,
+    "selector": {
+      "type": "id",
+      "value": "activity-code",
+      "selector": "#activity-code"
+    },
+    "element": {
+      "tagName": "input",
+      "type": "text",
+      "id": "activity-code",
+      "name": "eps_activityCode",
+      "className": "tb-input ng-untouched ng-valid ng-dirty",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": null,
+      "value": "h8"
+    },
+    "value": "h8",
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "input",
+    "timestamp": 1762354851199,
+    "selector": {
+      "type": "id",
+      "value": "activity-code",
+      "selector": "#activity-code"
+    },
+    "element": {
+      "tagName": "input",
+      "type": "text",
+      "id": "activity-code",
+      "name": "eps_activityCode",
+      "className": "tb-input ng-untouched ng-valid ng-dirty",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": null,
+      "value": "h80"
+    },
+    "value": "h80",
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354855926,
+    "selector": {
+      "type": "text",
+      "value": "Search",
+      "selector": "text=\"Search\""
+    },
+    "element": {
+      "tagName": "button",
+      "type": "submit",
+      "id": null,
+      "name": null,
+      "className": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Search",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "submit",
+    "timestamp": 1762354855927,
+    "selector": {
+      "type": "class",
+      "value": "search-form",
+      "selector": ".search-form"
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354880185,
+    "selector": {
+      "type": "text",
+      "value": "1",
+      "selector": "text=\"1\""
+    },
+    "element": {
+      "tagName": "div",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": "number-text number-text-gray-background",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "1",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354882737,
+    "selector": {
+      "type": "text",
+      "value": "Welcome to the HRSA Electronic Handbooks!",
+      "selector": "text=\"Welcome to the HRSA Electronic Handbooks!\""
+    },
+    "element": {
+      "tagName": "span",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Welcome to the HRSA Electronic Handbooks!",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354887791,
+    "selector": {
+      "type": "aria-label",
+      "value": "1 My Tasks",
+      "selector": "[aria-label=\"1 My Tasks\"]"
+    },
+    "element": {
+      "tagName": "a",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": "noti-button",
+      "placeholder": null,
+      "ariaLabel": "1 My Tasks",
+      "text": null,
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/home"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354896056,
+    "selector": {
+      "type": "class",
+      "value": "pending-tasks-img",
+      "selector": ".pending-tasks-img"
+    },
+    "element": {
+      "tagName": "img",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": "pending-tasks-img",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": null,
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354897858,
+    "selector": {
+      "type": "tag",
+      "value": "html",
+      "selector": "html"
+    },
+    "element": {
+      "tagName": "html",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "My Tasks - Summary\n\n    \n\n    \n        \n        \n        \n        \n        \n        \n        \n      ",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354899561,
+    "selector": {
+      "type": "tag",
+      "value": "html",
+      "selector": "html"
+    },
+    "element": {
+      "tagName": "html",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "My Tasks - Summary\n\n    \n\n    \n        \n        \n        \n        \n        \n        \n        \n      ",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354903175,
+    "selector": {
+      "type": "tag",
+      "value": "div",
+      "selector": "div"
+    },
+    "element": {
+      "tagName": "div",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Tasks\n        \n  \n    \n      \n        \n        Videos\n      \n    \n      \n        \n        Help\n     ",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354903428,
+    "selector": {
+      "type": "tag",
+      "value": "div",
+      "selector": "div"
+    },
+    "element": {
+      "tagName": "div",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Tasks\n        \n  \n    \n      \n        \n        Videos\n      \n    \n      \n        \n        Help\n     ",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354906185,
+    "selector": {
+      "type": "tag",
+      "value": "html",
+      "selector": "html"
+    },
+    "element": {
+      "tagName": "html",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "My Tasks - Summary\n\n    \n\n    \n        \n        \n        \n        \n        \n        \n        \n      ",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354908231,
+    "selector": {
+      "type": "class",
+      "value": "page-container",
+      "selector": ".page-container"
+    },
+    "element": {
+      "tagName": "div",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": "page-container",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Tasks\n        \n  \n    \n      \n        \n        Videos\n      \n    \n      \n        \n        Help\n     ",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354914242,
+    "selector": {
+      "type": "text",
+      "value": "Set as Default View",
+      "selector": "text=\"Set as Default View\""
+    },
+    "element": {
+      "tagName": "a",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": "setdefault-button",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Set as Default View",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354917307,
+    "selector": {
+      "type": "text",
+      "value": "Success",
+      "selector": "text=\"Success\""
+    },
+    "element": {
+      "tagName": "span",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": "toast-title",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Success",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354919415,
+    "selector": {
+      "type": "aria-label",
+      "value": "print",
+      "selector": "[aria-label=\"print\"]"
+    },
+    "element": {
+      "tagName": "button",
+      "type": "button",
+      "id": null,
+      "name": null,
+      "className": "print-button__container",
+      "placeholder": null,
+      "ariaLabel": "print",
+      "text": null,
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354927714,
+    "selector": {
+      "type": "text",
+      "value": "Detailed view",
+      "selector": "text=\"Detailed view\""
+    },
+    "element": {
+      "tagName": "button",
+      "type": "submit",
+      "id": null,
+      "name": null,
+      "className": "detailed-button",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Detailed view",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354931877,
+    "selector": {
+      "type": "aria-label",
+      "value": "My Tasks, Tasks that are assigned to me",
+      "selector": "[aria-label=\"My Tasks, Tasks that are assigned to me\"]"
+    },
+    "element": {
+      "tagName": "a",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": "nav-link active",
+      "placeholder": null,
+      "ariaLabel": "My Tasks, Tasks that are assigned to me",
+      "text": "My Tasks\n                    My Tasks",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  },
+  {
+    "type": "click",
+    "timestamp": 1762354938735,
+    "selector": {
+      "type": "text",
+      "value": "Videos",
+      "selector": "text=\"Videos\""
+    },
+    "element": {
+      "tagName": "a",
+      "type": null,
+      "id": null,
+      "name": null,
+      "className": "icon-btn icon-btn--outline-primary icon-btn--sm video-icon-link-btn",
+      "placeholder": null,
+      "ariaLabel": null,
+      "text": "Videos",
+      "value": null
+    },
+    "url": "https://ehbsec.hrsa.gov/EPSInternal/tasks?view=1C7A7B60-5DF3-4C65-8570-5CFFC8ABF21E"
+  }
+]

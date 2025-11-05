@@ -255,11 +255,29 @@ export class SmartNavigator {
       // Wait for page to stabilize
       await this.page.waitForTimeout(2000);
       
+      // If on a redirect page (frontdoor, secur), wait longer for redirect to complete
+      if (currentUrl.includes('frontdoor') || currentUrl.includes('secur/')) {
+        console.log('🔄 Detected redirect page, waiting for navigation...\n');
+        await this.page.waitForTimeout(5000);
+        await this.page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
+        continue; // Skip to next iteration after redirect
+      }
+      
+      // If on a flow page, wait extra time for dynamic content to load
+      if (currentUrl.includes('loginflow') || currentUrl.includes('flow')) {
+        await this.page.waitForTimeout(3000);
+        await this.page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
+      }
+      
       // Get page content to understand context
       const pageText = await this.page.evaluate(() => document.body.innerText.toLowerCase());
       
       // Check if we've reached a final page
-      if (this.isFinalPage(pageText, currentUrl)) {
+      const isFinal = this.isFinalPage(pageText, currentUrl);
+      console.log(`🔍 Checking if final page: ${currentUrl}`);
+      console.log(`   Result: ${isFinal ? 'YES (stopping)' : 'NO (continuing)'}\n`);
+      
+      if (isFinal) {
         console.log('✅ Reached final page!\n');
         break;
       }
@@ -299,24 +317,35 @@ export class SmartNavigator {
    * Detect if we've reached a final/home page
    */
   isFinalPage(pageText, url) {
+    const urlLower = url.toLowerCase();
+    
+    // NOT final if still on login, agreement, flow, or redirect pages
+    if (urlLower.includes('login') || 
+        urlLower.includes('agreement') || 
+        urlLower.includes('flow') ||
+        urlLower.includes('loginflow') ||
+        urlLower.includes('frontdoor') ||
+        urlLower.includes('secur/') ||
+        urlLower.includes('returl=')) {
+      return false;
+    }
+    
     // Check for common final page indicators
     const finalPageIndicators = [
       'dashboard',
       'home',
-      'welcome',
-      'logged in',
+      'welcome back',
       'my account',
       'profile',
       'main menu',
+      'portfolio',
+      'award',
+      'reporting',
     ];
     
-    const urlLower = url.toLowerCase();
-    
-    // Check URL
-    if (urlLower.includes('home') || 
-        urlLower.includes('dashboard') || 
-        urlLower.includes('main') ||
-        (!urlLower.includes('login') && !urlLower.includes('agreement') && !urlLower.includes('flow'))) {
+    // Check URL for final page patterns
+    if (urlLower.includes('/s/') && !urlLower.includes('login')) {
+      // Likely a final page (e.g., /pars/s/)
       return true;
     }
     

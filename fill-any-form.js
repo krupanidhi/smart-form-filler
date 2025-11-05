@@ -11,7 +11,7 @@ import { SmartNavigator } from './src/smart-navigator.js';
 const args = process.argv.slice(2);
 
 if (args.length === 0 || args[0] === '--help' || args[0] === '-h') {
-  console.log(`
+    console.log(`
 🤖 Universal Form Filler - Fill ANY form automatically
 
 Usage:
@@ -51,7 +51,7 @@ Examples with data:
   node fill-any-form.js https://example.com/contact --data "email=test@example.com,name=John,message=Hello"
   node fill-any-form.js https://example.com/login --data "username=myuser,password=mypass" --submit
   `);
-  process.exit(0);
+    process.exit(0);
 }
 
 const url = args[0];
@@ -69,34 +69,34 @@ const options = {
 // Parse custom data
 const dataIndex = args.indexOf('--data');
 if (dataIndex !== -1 && args[dataIndex + 1]) {
-  const dataPairs = args[dataIndex + 1].split(',');
-  dataPairs.forEach(pair => {
-    const [key, value] = pair.split('=');
-    if (key && value) {
-      options.customData[key.trim()] = value.trim();
-    }
-  });
+    const dataPairs = args[dataIndex + 1].split(',');
+    dataPairs.forEach(pair => {
+        const [key, value] = pair.split('=');
+        if (key && value) {
+            options.customData[key.trim()] = value.trim();
+        }
+    });
 }
 
 // Parse submit selector
 const submitSelectorIndex = args.indexOf('--submit-selector');
 if (submitSelectorIndex !== -1 && args[submitSelectorIndex + 1]) {
-  options.submitSelector = args[submitSelectorIndex + 1];
+    options.submitSelector = args[submitSelectorIndex + 1];
 }
 
 async function fillAnyForm() {
-  console.log('🤖 Universal Form Filler\n');
-  console.log(`🌐 Target URL: ${url}`);
-  
-  if (Object.keys(options.customData).length > 0) {
-    console.log('📋 Custom Data:', options.customData);
-  }
-  
-  const filler = new SmartFormFiller({
-    headless: options.headless,
-    slowMo: options.slow ? 200 : 50,
-    screenshot: true,
-  });
+    console.log('🤖 Universal Form Filler\n');
+    console.log(`🌐 Target URL: ${url}`);
+
+    if (Object.keys(options.customData).length > 0) {
+        console.log('📋 Custom Data:', options.customData);
+    }
+
+    const filler = new SmartFormFiller({
+        headless: options.headless,
+        slowMo: options.slow ? 200 : 50,
+        screenshot: true,
+    });
 
   try {
     console.log('\n🔄 Loading page...');
